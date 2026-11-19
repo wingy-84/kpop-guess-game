@@ -33,7 +33,7 @@
 #### GitHub 發布
 
 - [x] 建立 GitHub repository 並推送 `main` 分支。
-- [ ] 在 repository Settings → Pages 將 Source 設為 GitHub Actions。
+- [x] 在 repository Settings → Pages 將 Source 設為 GitHub Actions。
 - [ ] 重新執行 Actions workflow，確認部署成功並記錄正式網站網址。
 
 #### 後續改善
@@ -48,5 +48,6 @@
 
 - 初版使用純 HTML、CSS、JavaScript，無需建置程序即可由 GitHub Pages 提供靜態網站。
 - 初版舞蹈與 MV 模式以文字描述呈現，避免依賴尚未確認授權的媒體素材。
+
 
 

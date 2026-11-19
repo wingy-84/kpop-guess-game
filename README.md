@@ -2,7 +2,7 @@
 
 以 Emoji、舞蹈動作和 MV 線索挑戰 K-pop 知識的輕量互動網站。以純 HTML、CSS、JavaScript 製作，透過 GitHub Actions 自動部署到 GitHub Pages。
 
-## 本機預覽
+## 線上遊玩\n\nhttps://wingy-84.github.io/kpop-guess-game/\n\n## 本機預覽
 
 直接用瀏覽器開啟 `index.html` 即可。
 
@@ -17,3 +17,4 @@
 - MV 場景猜歌
 
 目前題庫是示範內容，請留意線索與答案會持續擴充。
+

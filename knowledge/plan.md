@@ -17,7 +17,7 @@
 - [x] 已完成純前端網站雛形，包含首頁與三種玩法入口。
 - [x] 已加入可互動的示範題庫、答案輸入、提示及揭曉答案功能。
 - [x] 已加入 GitHub Actions → GitHub Pages 部署 workflow。
-- [ ] 已建立公開 GitHub repository 並推送 `main`。Actions workflow 已啟動，但因 Pages 尚未設定為使用 GitHub Actions 而在 Configure Pages 步驟失敗。
+- [ ] 已建立公開 GitHub repository 並推送 `main`。Pages 已設為 GitHub Actions，最近一次部署成功，網站網址為 https://wingy-84.github.io/kpop-guess-game/。
 
 ### 已完成
 
@@ -34,7 +34,7 @@
 
 - [x] 建立 GitHub repository 並推送 `main` 分支。
 - [x] 在 repository Settings → Pages 將 Source 設為 GitHub Actions。
-- [ ] 重新執行 Actions workflow，確認部署成功並記錄正式網站網址。
+- [x] 重新執行 Actions workflow，部署成功並確認正式網站網址可正常開啟。
 
 #### 後續改善
 
@@ -48,6 +48,7 @@
 
 - 初版使用純 HTML、CSS、JavaScript，無需建置程序即可由 GitHub Pages 提供靜態網站。
 - 初版舞蹈與 MV 模式以文字描述呈現，避免依賴尚未確認授權的媒體素材。
+
 
 
 

@@ -17,7 +17,7 @@
 - [x] 已完成純前端網站雛形，包含首頁與三種玩法入口。
 - [x] 已加入可互動的示範題庫、答案輸入、提示及揭曉答案功能。
 - [x] 已加入 GitHub Actions → GitHub Pages 部署 workflow。
-- [ ] GitHub 連線已啟用，但此工作階段未載入可操作 repository 的 GitHub 工具，本機亦未安裝 GitHub CLI，因此尚未建立遠端 repository 或發布。
+- [ ] 已建立公開 GitHub repository 並推送 `main`。Actions workflow 已啟動，但因 Pages 尚未設定為使用 GitHub Actions 而在 Configure Pages 步驟失敗。
 
 ### 已完成
 
@@ -32,9 +32,9 @@
 
 #### GitHub 發布
 
-- [ ] 使用可用的 GitHub 工具或 CLI 建立遠端 repository 並推送 `main` 分支（目前連線已啟用，但本工作階段尚無可用操作工具）。
-- [ ] 確認 repository 的 Pages 使用 GitHub Actions 作為部署來源。
-- [ ] 確認 Actions 部署成功，記錄正式網站網址。
+- [x] 建立 GitHub repository 並推送 `main` 分支。
+- [ ] 在 repository Settings → Pages 將 Source 設為 GitHub Actions。
+- [ ] 重新執行 Actions workflow，確認部署成功並記錄正式網站網址。
 
 #### 後續改善
 
@@ -48,4 +48,5 @@
 
 - 初版使用純 HTML、CSS、JavaScript，無需建置程序即可由 GitHub Pages 提供靜態網站。
 - 初版舞蹈與 MV 模式以文字描述呈現，避免依賴尚未確認授權的媒體素材。
+
 

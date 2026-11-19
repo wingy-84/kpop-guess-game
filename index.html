@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10101a">
+  <meta name="description" content="用 Emoji、舞蹈和 MV 線索，挑戰你的 K-pop 猜歌力！">
+  <title>猜 K-pop！— 用線索猜中你的本命歌</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+TC:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="glow glow-a"></div><div class="glow glow-b"></div>
+  <header class="topbar"><a class="brand" href="#home" aria-label="猜 K-pop 首頁"><span class="brand-mark">♪</span> GUESS<span class="brand-accent">POP</span></a><div class="top-tag"><span class="live-dot"></span> K-POP QUIZ CLUB</div></header>
+  <main id="home" class="shell">
+    <section class="hero">
+      <div class="hero-copy"><span class="eyebrow"><span>✦</span> YOUR NEXT FAVORITE GAME</span>
+        <h1>聽見線索，<br><span class="gradient-text">猜中那首歌。</span></h1>
+        <p class="hero-desc">Emoji、舞蹈、MV —— 用你的 K-pop 雷達，看看今天能猜中幾首！</p>
+        <div class="hero-actions"><a class="primary-btn" href="#modes">開始挑戰 <span>↘</span></a><div class="tiny-note"><span>✦</span> 一個人也能玩得很盡興</div></div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><div class="orbit orbit-one"></div><div class="orbit orbit-two"></div><div class="sticker sticker-top">♪ ♫ ♪</div><div class="disc"><div class="disc-center"><span>PLAY</span><b>♫</b></div></div><div class="sticker sticker-bottom">NOW PLAYING<br><strong>YOUR BIAS?</strong></div><div class="spark spark-one">✦</div><div class="spark spark-two">✳</div></div>
+    </section>
+    <section id="modes" class="mode-section"><div class="section-heading"><div><span class="eyebrow">PICK YOUR MODE</span><h2>今天想怎麼猜？</h2></div><span class="mode-count">01 <i>/</i> 03</span></div>
+      <div class="mode-grid">
+        <button class="mode-card emoji-card" data-mode="emoji"><span class="card-top"><span class="mode-icon">✦</span><span class="difficulty">暖身一下</span></span><span class="emoji-preview">🌙 🐱 💜</span><span class="card-title">Emoji 猜歌</span><span class="card-desc">幾個小小符號，藏著哪首大熱門？</span><span class="card-link">開始猜 <b>↗</b></span></button>
+        <button class="mode-card dance-card" data-mode="dance"><span class="card-top"><span class="mode-icon">↗</span><span class="difficulty">節奏感測試</span></span><span class="dance-preview"><span>✧</span><span>♪</span><span>✦</span></span><span class="card-title">舞蹈猜歌</span><span class="card-desc">看招牌動作描述，猜猜是哪首歌。</span><span class="card-link">開始猜 <b>↗</b></span></button>
+        <button class="mode-card mv-card" data-mode="mv"><span class="card-top"><span class="mode-icon">▻</span><span class="difficulty">MV 觀察力</span></span><span class="mv-preview"><span>SCENE 01</span><b>▶</b></span><span class="card-title">MV 猜歌</span><span class="card-desc">從 MV 場景與故事線索找到答案。</span><span class="card-link">開始猜 <b>↗</b></span></button>
+      </div>
+    </section>
+    <section class="bottom-note"><span>🎧</span><p>小提醒：題庫先從經典熱門曲開始，<strong>準備好展現你的 K-pop 知識了嗎？</strong></p><span class="note-spark">✦</span></section>
+    <footer><span>GUESSPOP © 2026</span><span>MADE FOR K-POP FANS <b>♥</b></span></footer>
+  </main>
+  <div class="modal-backdrop" id="game-modal" hidden><section class="game-modal" role="dialog" aria-modal="true" aria-labelledby="game-title"><button class="close-btn" id="close-modal" aria-label="關閉">×</button><div class="modal-kicker" id="modal-kicker">ROUND 01 · EMOJI</div><h2 id="game-title">猜猜這是哪首歌？</h2><div class="question-clue" id="question-clue"></div><p class="artist-hint" id="artist-hint"></p><form id="answer-form"><label class="sr-only" for="answer-input">輸入歌名或歌手</label><input id="answer-input" autocomplete="off" placeholder="輸入歌名或歌手…"><button class="primary-btn" type="submit">送出答案 <span>→</span></button></form><div class="feedback" id="feedback" aria-live="polite"></div><div class="modal-controls"><button id="hint-btn">給我提示</button><button id="answer-btn">看答案</button><button id="next-btn" hidden>下一題 →</button></div></section></div>
+  <script src="script.js"></script>
+</body>
+</html>

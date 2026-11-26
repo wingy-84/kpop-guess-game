@@ -16,3 +16,11 @@
 - **原因**：子字串比對會把答案的一小段也當作正確，造成誤判；常見格式差異則可透過正規化處理。
 - **適用範圍**：答案是短文字且能列舉可接受別名的靜態測驗。若未來接受羅馬拼音變體、錯字或語音輸入，應明確加入別名或採用有門檻與測試的相似度規則。
 - **檢查重點**：完整別名可通過，忽略大小寫／空白／標點仍可通過，任意前後綴或片段不得通過。
+
+## 2026-11-26：用官方 MV／舞蹈影片校正題目線索
+
+- **做法**：查核官方藝人或唱片公司發布的 MV、舞蹈影片，並以官方發佈日期檢查題目年份。只保留能被來源支持的具體線索；遇到錯誤年份、別名或人數描述就直接修正。
+- **本次修正**：BLACKPINK〈DDU-DU DDU-DU〉原提示把年份寫成 2020，改為 2018；望遠鏡手勢改為較具辨識度的手槍手勢。BTS〈FIRE〉移除錯誤別名 `warrior`，並改正「歌名是一種戰鬥」的提示。TWICE〈Feel Special〉MV 線索改為九位成員與金色舞台。
+- **適用範圍**：以真實歌曲、藝人和作品畫面作答的音樂問答題庫；年份、團員數、歌名等可由官方發布資訊核對，畫面細節仍需回看官方影片確認。
+- **參考來源**：[BLACKPINK 官方〈DDU-DU DDU-DU〉MV](https://www.youtube.com/watch?v=IHNzOHi8sJs)、[BLACKPINK 官方舞蹈練習](https://www.youtube.com/watch?v=jOJbXvjZ-cQ)、[BTS 官方〈FIRE〉編舞版 MV](https://www.youtube.com/watch?v=2cTZTqBU1Rc)、[JYP 官方〈Feel Special〉MV](https://www.youtube.com/watch?v=3ymwOvzhwHs)、[TIME 對〈Feel Special〉MV 場景的描述](https://time.com/5696384/twice-interview-feel-special/)。
+- **檢查重點**：引用官方影片確認作品與日期；視覺描述須能在 MV 中直接找到，避免把推測寫成線索。

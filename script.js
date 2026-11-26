@@ -6,12 +6,12 @@ const questions = {
     { clue: '🍭 🫧 💗', hint: '女團・甜甜的氣泡糖概念', answers: ['bubble gum', 'newjeans'], display: 'NewJeans — Bubble Gum' }
   ],
   dance: [
-    { clue: '招牌動作：雙手比出望遠鏡，在眼睛前轉一圈。', hint: '女團・2020 年的超級熱門歌', answers: ['ddu-du ddu-du', 'ddu du ddu du', 'blackpink'], display: 'BLACKPINK — 뚜두뚜두 (DDU-DU DDU-DU)' },
-    { clue: '招牌動作：雙手交叉後向外打開，像在打開一朵花。', hint: '男團・歌曲名字是一種「戰鬥」', answers: ['warrior', 'bts', 'fire'], display: 'BTS — FIRE' },
+    { clue: '招牌動作：食指與拇指比出手槍手勢，隨著副歌節奏指向鏡頭。', hint: '女團・2018 年推出的代表熱門曲', answers: ['ddu-du ddu-du', 'ddu du ddu du', 'blackpink'], display: 'BLACKPINK — 뚜두뚜두 (DDU-DU DDU-DU)' },
+    { clue: '招牌動作：副歌群舞配合「불타오르네」的吶喊，動作俐落有力。', hint: '男團・英文歌名是「火」', answers: ['bts', 'fire'], display: 'BTS — FIRE' },
     { clue: '招牌動作：手指做出小愛心，再跟著節拍向前推。', hint: '男團・歌名就像一句深情告白', answers: ['love scenario', 'ikon'], display: 'iKON — LOVE SCENARIO' }
   ],
   mv: [
-    { clue: 'MV 場景：一座被糖果色裝飾的巨大房子，五位女孩在房間裡開派對。', hint: '女團・歌名像邀請大家加入一個俱樂部', answers: ['feel special', 'twice'], display: 'TWICE — Feel Special' },
+    { clue: 'MV 場景：成員穿梭在各自風格的華麗場景，最後在金色舞台齊舞。', hint: '女團・歌名是在說「感到特別」', answers: ['feel special', 'twice'], display: 'TWICE — Feel Special' },
     { clue: 'MV 場景：在紅色沙漠與神祕儀式之間穿梭，畫面有強烈的紅黑色調。', hint: '男團・歌名是一種「奇蹟」', answers: ['wonderland', 'ateez'], display: 'ATEEZ — WONDERLAND' },
     { clue: 'MV 場景：復古校園、Y2K 穿搭，女孩們在走廊和操場自在玩耍。', hint: '女團・歌名是簡單的問候', answers: ['attention', 'newjeans'], display: 'NewJeans — Attention' }
   ]

@@ -4,19 +4,22 @@ const questions = {
     { clue: '🪜 🚪 🔝', hint: "女團・副歌唱著「I'm on the next level」", answers: ['next level', 'aespa'], display: 'aespa — Next Level', difficulty: 'easy' },
     { clue: '🧛‍♂️ 🌙 🩸', hint: '男團・命運與月亮的故事', answers: ['bite me', 'enhypen'], display: 'ENHYPEN — Bite Me', difficulty: 'medium' },
     { clue: '🍭 🫧 💗', hint: '女團・甜甜的氣泡糖概念', answers: ['bubble gum', 'newjeans'], display: 'NewJeans — Bubble Gum', difficulty: 'easy' },
-    { clue: '🪩 🕺 🎷 ✨', hint: '男團・副歌唱著「light it up like dynamite」', answers: ['dynamite', 'bts'], display: 'BTS — Dynamite', difficulty: 'easy' }
+    { clue: '🪩 🕺 🎷 ✨', hint: '男團・副歌唱著「light it up like dynamite」', answers: ['dynamite', 'bts'], display: 'BTS — Dynamite', difficulty: 'easy' },
+    { clue: '🩷 🌹 ☠️', hint: '女團・副歌反覆唱著「pink venom」', answers: ['pink venom'], display: 'BLACKPINK — Pink Venom', difficulty: 'medium' }
   ],
   dance: [
     { clue: '招牌動作：食指與拇指比出手槍手勢，隨著副歌節奏指向鏡頭。', hint: '女團・2018 年推出的代表熱門曲', answers: ['ddu-du ddu-du', 'ddu du ddu du', 'blackpink'], display: 'BLACKPINK — 뚜두뚜두 (DDU-DU DDU-DU)', difficulty: 'medium' },
     { clue: '招牌動作：副歌群舞配合「불타오르네」的吶喊，動作俐落有力。', hint: '男團・英文歌名是「火」', answers: ['fire', 'bts'], display: 'BTS — FIRE', difficulty: 'easy' },
     { clue: '招牌動作：隊形隨著旋律流動變換，像一段愛情故事的起承轉合。', hint: '男團・歌名可以形容一段愛情故事', answers: ['love scenario', 'ikon'], display: 'iKON — LOVE SCENARIO', difficulty: 'medium' },
-    { clue: '招牌動作：雙手在臉頰旁比出哭泣符號「TT」，做出委屈表情。', hint: '女團・歌名只有兩個英文字母', answers: ['tt', 'twice'], display: 'TWICE — TT', difficulty: 'easy' }
+    { clue: '招牌動作：雙手在臉頰旁比出哭泣符號「TT」，做出委屈表情。', hint: '女團・歌名只有兩個英文字母', answers: ['tt', 'twice'], display: 'TWICE — TT', difficulty: 'easy' },
+    { clue: '招牌動作：副歌先屈臂展現力量，再把手勢變成貓爪，配合「Anti-ti-ti fragile」的節奏。', hint: '女團・歌名形容不容易被擊垮', answers: ['antifragile'], display: 'LE SSERAFIM — ANTIFRAGILE', difficulty: 'hard' }
   ],
   mv: [
     { clue: 'MV 場景：成員穿梭在各自風格的華麗場景，最後在金色舞台齊舞。', hint: '女團・歌名是在說「感到特別」', answers: ['feel special', 'twice'], display: 'TWICE — Feel Special', difficulty: 'medium' },
     { clue: 'MV 場景：成員穿著紅黑制服，在行進樂隊與烈焰場景前列隊前進。', hint: '男團・歌名是一種「奇蹟」', answers: ['wonderland', 'ateez'], display: 'ATEEZ — WONDERLAND', difficulty: 'hard' },
     { clue: 'MV 場景：五位女孩在大片綠草與藍天前自在起舞，畫面明亮清爽。', hint: '女團・歌名是簡單的問候', answers: ['attention'], display: 'NewJeans — Attention', difficulty: 'easy' },
-    { clue: 'MV 場景：手持攝影機記錄五位女孩的校園日常，MV 分成 Side A 與 Side B。', hint: '女團・歌名描述「我也一樣」', answers: ['ditto'], display: 'NewJeans — Ditto', difficulty: 'medium' }
+    { clue: 'MV 場景：手持攝影機記錄五位女孩的校園日常，MV 分成 Side A 與 Side B。', hint: '女團・歌名描述「我也一樣」', answers: ['ditto'], display: 'NewJeans — Ditto', difficulty: 'medium' },
+    { clue: 'MV 場景：收到舞會邀請後準備赴約，接著在舞會場景唱歌跳舞。', hint: '女團・英文歌名是「那種心動的感覺」', answers: ['the feels'], display: 'TWICE — The Feels', difficulty: 'medium' }
   ]
 };
 let currentMode, currentQuestion, questionIndex = 0, hintLevel = 0, solved = false, score = 0, roundQuestions = [], roundComplete = false;

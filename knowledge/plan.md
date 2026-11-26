@@ -17,7 +17,7 @@
 - [x] 已完成純前端網站雛形，包含首頁與三種玩法入口。
 - [x] 已加入可互動的示範題庫、答案輸入、提示及揭曉答案功能。
 - [x] 已加入 GitHub Actions → GitHub Pages 部署 workflow。
-- [ ] 已建立公開 GitHub repository 並推送 `main`。Pages 已設為 GitHub Actions，最近一次部署成功，網站網址為 https://wingy-84.github.io/kpop-guess-game/。
+- [x] 已建立公開 GitHub repository 並推送 `main`。Pages 已設為 GitHub Actions，最近一次部署成功，網站網址為 https://wingy-84.github.io/kpop-guess-game/。
 
 ### 已完成
 
@@ -27,20 +27,15 @@
 - [x] 建立第一批示範題目與玩法提示。
 - [x] 新增 Actions workflow，推送至 `main` 分支時部署至 GitHub Pages。
 - [x] 撰寫專案說明與部署步驟。
+- [x] 為各模式加入洗牌回合、即時分數、回合進度、結算及重玩流程。
+- [x] 修正題庫提示字串中的引號語法錯誤，恢復 JavaScript 正常載入。
 
 ### 剩餘項目
-
-#### GitHub 發布
-
-- [x] 建立 GitHub repository 並推送 `main` 分支。
-- [x] 在 repository Settings → Pages 將 Source 設為 GitHub Actions。
-- [x] 重新執行 Actions workflow，部署成功並確認正式網站網址可正常開啟。
 
 #### 後續改善
 
 - [ ] 擴充並校對 K-pop 題庫、答案別名與難度。
-- [ ] 讓題目支援歌曲、藝人多種可接受答案，並調整答案判定規則。
-- [ ] 加入分數、回合進度、結算與重新開始流程。
+- [ ] 校對線索與答案，避免含糊或不準確的描述，並改善答案相似字串的判定規則。
 - [ ] 評估可合法使用的舞蹈與 MV 圖片／影片素材；目前使用文字線索，沒有嵌入受版權保護的影音內容。
 - [ ] 依使用回饋改善手機與桌面版體驗。
 
@@ -48,7 +43,4 @@
 
 - 初版使用純 HTML、CSS、JavaScript，無需建置程序即可由 GitHub Pages 提供靜態網站。
 - 初版舞蹈與 MV 模式以文字描述呈現，避免依賴尚未確認授權的媒體素材。
-
-
-
-
+- 每個模式以現有題庫長度作為一輪的題數；答對每題得一分，揭曉答案不加分。未加入倒數計時或保存跨輪最佳成績，維持即開即玩的簡單流程。

@@ -139,6 +139,22 @@ test('reduced-motion preference disables smooth scrolling and transitions', () =
   assert.match(css, /\.mode-card:hover\{transform:none\}/);
 });
 
+test('small footer text and mode counter separator meet 4.5:1 contrast', () => {
+  const luminance = hex => {
+    const channels = hex.match(/[0-9a-f]{2}/gi).map(value => parseInt(value, 16) / 255);
+    const linear = channels.map(value => value <= 0.04045 ? value / 12.92 : ((value + 0.055) / 1.055) ** 2.4);
+    return 0.2126 * linear[0] + 0.7152 * linear[1] + 0.0722 * linear[2];
+  };
+  const contrast = (foreground, background) => {
+    const values = [luminance(foreground), luminance(background)].sort((a, b) => b - a);
+    return (values[0] + 0.05) / (values[1] + 0.05);
+  };
+  const footer = css.match(/footer\{[^}]*color:(#[0-9a-f]{6})/i)?.[1];
+  const separator = css.match(/\.mode-count i\{[^}]*color:(#[0-9a-f]{6})/i)?.[1];
+  assert.ok(footer && contrast(footer, '#10101a') >= 4.5);
+  assert.ok(separator && contrast(separator, '#10101a') >= 4.5);
+});
+
 test('every question has valid difficulty and answer aliases', () => {
   const game = createGame();
   for (const questions of Object.values(game.inspect().questions)) {

@@ -14,7 +14,7 @@ function createGame({ random = Math.random } = {}) {
   const ids = [
     'game-modal', 'question-clue', 'feedback', 'round-status', 'question-difficulty',
     'game-title', 'modal-kicker', 'artist-hint', 'answer-input', 'answer-form',
-    'next-btn', 'hint-btn', 'answer-btn', 'close-modal'
+    'next-btn', 'hint-btn', 'answer-btn', 'close-modal', 'emoji-preview'
   ];
   const elements = Object.fromEntries(ids.map(id => [id, {
     id,
@@ -121,6 +121,11 @@ test('second hint shows the first letter of the song title', () => {
   game.elements['hint-btn'].click();
   game.elements['hint-btn'].click();
   assert.equal(game.elements['artist-hint'].textContent, '歌名第一個字母：N');
+});
+
+test('home emoji preview comes from the current question bank', () => {
+  const game = createGame();
+  assert.equal(game.elements['emoji-preview'].textContent, game.inspect().questions.emoji[0].clue);
 });
 
 test('answer field asks for the song title accepted by every question', () => {

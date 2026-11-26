@@ -22,6 +22,7 @@ const questions = {
     { clue: 'MV 場景：收到舞會邀請後準備赴約，接著在舞會場景唱歌跳舞。', hint: '女團・英文歌名是「那種心動的感覺」', answers: ['the feels'], display: 'TWICE — The Feels', difficulty: 'medium' }
   ]
 };
+document.querySelector('.emoji-preview').textContent = questions.emoji[0].clue;
 let currentMode, currentQuestion, questionIndex = 0, hintLevel = 0, solved = false, score = 0, roundQuestions = [], roundComplete = false;
 let returnFocus = null;
 const modal = document.querySelector('#game-modal'), clue = document.querySelector('#question-clue'), feedback = document.querySelector('#feedback');

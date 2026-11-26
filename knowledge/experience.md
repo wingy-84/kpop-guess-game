@@ -59,3 +59,11 @@
 後續核對發現，iKON〈LOVE SCENARIO〉的「小愛心」動作缺乏可靠來源支持，改為較概括且符合官方資料的隊形流動線索；ATEEZ〈WONDERLAND〉改為紅黑制服、行進樂隊與烈焰場景；NewJeans〈Attention〉改為藍天綠草前的舞蹈場景。此類視覺細節應回看 MV 並以官方或可靠拍攝地資料交叉確認，無法確認時採用更概括的線索。
 
 參考：[YG LIFE 對〈LOVE SCENARIO〉編舞的說明](https://yg-life.com/archives/96823?lang=en)、[仁川觀光官方網站對〈Attention〉拍攝場景的記錄](https://eng-itour.incheon.go.kr/cmn/board/BBSMSTR_000000000080/4934bbsDetail.do)、[KpopStarz 對〈WONDERLAND〉MV 場景的報導](https://www.kpopstarz.com/articles/303927/20220113/ateez-gets-first-100-million-views-youtube-wonderland-mv.htm)。
+
+## 2026-11-26：以平台功能處理第三方音樂影片
+
+- **評估結果**：本專案先維持文字線索，不下載、剪輯或自行複製 MV／舞蹈影片影格。若產品後續需要預覽，優先使用影片平台明確提供的嵌入播放器，並逐支確認影片仍允許嵌入。
+- **原因**：平台的官方文件提供嵌入方式，但亦要求遵守播放器政策；僅因影片可公開觀看，不代表可自行重製或下載。嵌入會載入第三方內容，因此應依網站受眾與隱私需求另外確認設定。
+- **適用範圍**：以第三方音樂影片補充靜態網站線索的情境。自製或採授權素材仍需保存授權來源、作者與適用條款。
+- **參考來源**：[YouTube 官方嵌入說明與播放器政策](https://support.google.com/youtube/answer/171780?hl=en)、[YouTube 使用條款](https://www.youtube.com/t/terms)、[Creative Commons CC BY 4.0 授權要求](https://creativecommons.org/licenses/by/4.0/deed.en)。
+- **檢查重點**：確認素材來源、明確授權、平台嵌入設定、必要的署名，以及第三方載入對隱私與載入速度的影響。YouTube 說明也指出，兒童導向網站需遵守相應的自我標示要求；在確定網站受眾前不新增嵌入播放器。

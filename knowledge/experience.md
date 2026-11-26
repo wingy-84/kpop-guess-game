@@ -74,3 +74,7 @@
 - **覆蓋範圍**：三種模式回合、正確作答得分、揭曉答案不計分、結算與重玩、答案正規化及片段拒絕、題目難度／別名資料、鍵盤焦點循環與關閉後還原。
 - **適用範圍**：純前端、無套件建置流程的靜態網站，可用 Node.js 內建測試工具維持輕量 CI。模擬 DOM 不能取代真實瀏覽器的跨裝置視覺檢查。
 - **檢查結果**：`node --check script.js` 通過；`node --test .github/tests/game.test.js` 4 項通過。
+
+### Pages artifact job 邊界
+
+本次回歸檢查成功，但 Pages 部署 action 在同一 deploy job 找不到上一步才上傳的 artifact。將 Pages 設定與 artifact 上傳移到已完成檢查的 `verify` job，再由 `needs: verify` 的 `deploy` job 取用；部署 job 明列 `actions: read`、`pages: write`、`id-token: write` 所需權限。之後修改 artifact 產生與部署工作流程時，應依賴 job 間明確的 `needs`，並檢查 artifact 對部署 action 可見。

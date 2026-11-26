@@ -94,3 +94,7 @@
 已把 BLACKPINK〈How You Like That〉和 aespa〈Next Level〉的 Emoji 線索，從較主觀的月亮／貓／鏡子意象改為對應副歌文字的眼睛／樓梯符號，保留現有難度標示與答案別名。線索的圖像轉譯仍可有創意，但優先確保玩家能從歌曲本身找到對應點。
 
 參考：[BLACKPINK 官方〈How You Like That〉MV](https://www.youtube.com/watch?v=ioNng23DkIM)、[SMTOWN 官方 aespa〈Next Level〉MV](https://www.youtube.com/watch?v=4TWR90KJl84)。
+
+### Markdown 文件換行
+
+產生 Markdown 時將實際換行寫入檔案，不要把 `\\n` 文字當成換行；連結使用 Markdown 標籤可讓 README 的主要操作一眼可見。適用於手動組裝或由腳本輸出的 Markdown 文件。

@@ -6,6 +6,7 @@ const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, '..', '..', 'script.js'), 'utf8');
 const html = fs.readFileSync(path.join(__dirname, '..', '..', 'index.html'), 'utf8');
+const css = fs.readFileSync(path.join(__dirname, '..', '..', 'style.css'), 'utf8');
 
 function createGame({ random = Math.random } = {}) {
   let document;
@@ -129,6 +130,13 @@ test('answer field asks for the song title accepted by every question', () => {
 
 test('hint updates are announced to screen readers', () => {
   assert.match(html, /id="artist-hint" aria-live="polite"/);
+});
+
+test('reduced-motion preference disables smooth scrolling and transitions', () => {
+  assert.match(css, /@media\s*\(prefers-reduced-motion:\s*reduce\)/);
+  assert.match(css, /scroll-behavior:\s*auto/);
+  assert.match(css, /transition:\s*none!important/);
+  assert.match(css, /\.mode-card:hover\{transform:none\}/);
 });
 
 test('every question has valid difficulty and answer aliases', () => {

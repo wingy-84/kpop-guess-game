@@ -95,6 +95,10 @@
 
 參考：[BLACKPINK 官方〈How You Like That〉MV](https://www.youtube.com/watch?v=ioNng23DkIM)、[SMTOWN 官方 aespa〈Next Level〉MV](https://www.youtube.com/watch?v=4TWR90KJl84)。
 
+### 2026-11-26：歌名首字母提示
+
+第二階段提示應從主要歌名答案別名取第一個字元，而非從供玩家閱讀的「藝人 — 歌名」顯示字串取字元；否則可能洩漏藝人首字母而非題目要猜的歌名。讓 `answers[0]` 固定為主要歌名別名，並以小型互動回歸測試驗證提示內容。適用於題庫答案含多個別名、介面展示又包含藝人名稱的猜歌或問答遊戲；新增題目時維持第一別名為歌名。
+
 ### Markdown 文件換行
 
 產生 Markdown 時將實際換行寫入檔案，不要把 `\\n` 文字當成換行；連結使用 Markdown 標籤可讓 README 的主要操作一眼可見。適用於手動組裝或由腳本輸出的 Markdown 文件。

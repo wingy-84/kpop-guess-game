@@ -8,7 +8,7 @@ const questions = {
   ],
   dance: [
     { clue: '招牌動作：食指與拇指比出手槍手勢，隨著副歌節奏指向鏡頭。', hint: '女團・2018 年推出的代表熱門曲', answers: ['ddu-du ddu-du', 'ddu du ddu du', 'blackpink'], display: 'BLACKPINK — 뚜두뚜두 (DDU-DU DDU-DU)', difficulty: 'medium' },
-    { clue: '招牌動作：副歌群舞配合「불타오르네」的吶喊，動作俐落有力。', hint: '男團・英文歌名是「火」', answers: ['bts', 'fire'], display: 'BTS — FIRE', difficulty: 'easy' },
+    { clue: '招牌動作：副歌群舞配合「불타오르네」的吶喊，動作俐落有力。', hint: '男團・英文歌名是「火」', answers: ['fire', 'bts'], display: 'BTS — FIRE', difficulty: 'easy' },
     { clue: '招牌動作：隊形隨著旋律流動變換，像一段愛情故事的起承轉合。', hint: '男團・歌名可以形容一段愛情故事', answers: ['love scenario', 'ikon'], display: 'iKON — LOVE SCENARIO', difficulty: 'medium' },
     { clue: '招牌動作：雙手在臉頰旁比出哭泣符號「TT」，做出委屈表情。', hint: '女團・歌名只有兩個英文字母', answers: ['tt', 'twice'], display: 'TWICE — TT', difficulty: 'easy' }
   ],
@@ -63,7 +63,7 @@ document.querySelector('#answer-form').addEventListener('submit', event => {
   if (accepted) { solved = true; score++; feedback.textContent = `猜對了！答案是 ${currentQuestion.display} 🎉`; feedback.className = 'feedback'; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; document.querySelector('#next-btn').focus(); document.querySelector('#round-status').textContent = `第 ${questionIndex + 1} / ${roundQuestions.length} 題 · 得分 ${score}`; }
   else { feedback.textContent = '再想一下，或試試提示吧！'; feedback.className = 'feedback wrong'; }
 });
-document.querySelector('#hint-btn').addEventListener('click', () => { hintLevel++; document.querySelector('#artist-hint').textContent = hintLevel === 1 ? `提示：${currentQuestion.hint}` : `答案第一個字母：${currentQuestion.display[0]}`; });
+document.querySelector('#hint-btn').addEventListener('click', () => { hintLevel++; document.querySelector('#artist-hint').textContent = hintLevel === 1 ? `提示：${currentQuestion.hint}` : `歌名第一個字母：${currentQuestion.answers[0][0].toLocaleUpperCase()}`; });
 document.querySelector('#answer-btn').addEventListener('click', () => { feedback.textContent = `答案是 ${currentQuestion.display}`; feedback.className = 'feedback'; solved = true; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; document.querySelector('#next-btn').focus(); });
 document.querySelector('#next-btn').addEventListener('click', () => {
   if (roundComplete) { start(currentMode); return; }

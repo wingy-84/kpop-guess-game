@@ -112,6 +112,14 @@ test('answer matching accepts normalized full aliases and rejects partial matche
   assert.equal(game.inspect().score, 1);
 });
 
+test('second hint shows the first letter of the song title', () => {
+  const game = createGame({ random: () => 0 });
+  game.cards.find(card => card.dataset.mode === 'emoji').onClick();
+  game.elements['hint-btn'].click();
+  game.elements['hint-btn'].click();
+  assert.equal(game.elements['artist-hint'].textContent, '歌名第一個字母：N');
+});
+
 test('every question has valid difficulty and answer aliases', () => {
   const game = createGame();
   for (const questions of Object.values(game.inspect().questions)) {

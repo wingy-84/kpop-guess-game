@@ -20,9 +20,11 @@ const questions = {
   ]
 };
 let currentMode, currentQuestion, questionIndex = 0, hintLevel = 0, solved = false, score = 0, roundQuestions = [], roundComplete = false;
+let returnFocus = null;
 const modal = document.querySelector('#game-modal'), clue = document.querySelector('#question-clue'), feedback = document.querySelector('#feedback');
 const normalize = value => value.trim().toLocaleLowerCase().replace(/[\s\-_.!?'’]/g, '');
 function start(mode) {
+  if (modal.hidden) returnFocus = document.activeElement;
   resetRoundControls();
   currentMode = mode; score = 0; questionIndex = 0; roundComplete = false;
   roundQuestions = [...questions[mode]].sort(() => Math.random() - 0.5);
@@ -50,11 +52,11 @@ document.querySelector('#answer-form').addEventListener('submit', event => {
   const guess = normalize(document.querySelector('#answer-input').value);
   if (!guess) return;
   const accepted = currentQuestion.answers.some(answer => normalize(answer) === guess);
-  if (accepted) { solved = true; score++; feedback.textContent = `猜對了！答案是 ${currentQuestion.display} 🎉`; feedback.className = 'feedback'; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; document.querySelector('#round-status').textContent = `第 ${questionIndex + 1} / ${roundQuestions.length} 題 · 得分 ${score}`; }
+  if (accepted) { solved = true; score++; feedback.textContent = `猜對了！答案是 ${currentQuestion.display} 🎉`; feedback.className = 'feedback'; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; document.querySelector('#next-btn').focus(); document.querySelector('#round-status').textContent = `第 ${questionIndex + 1} / ${roundQuestions.length} 題 · 得分 ${score}`; }
   else { feedback.textContent = '再想一下，或試試提示吧！'; feedback.className = 'feedback wrong'; }
 });
 document.querySelector('#hint-btn').addEventListener('click', () => { hintLevel++; document.querySelector('#artist-hint').textContent = hintLevel === 1 ? `提示：${currentQuestion.hint}` : `答案第一個字母：${currentQuestion.display[0]}`; });
-document.querySelector('#answer-btn').addEventListener('click', () => { feedback.textContent = `答案是 ${currentQuestion.display}`; feedback.className = 'feedback'; solved = true; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; });
+document.querySelector('#answer-btn').addEventListener('click', () => { feedback.textContent = `答案是 ${currentQuestion.display}`; feedback.className = 'feedback'; solved = true; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; document.querySelector('#next-btn').focus(); });
 document.querySelector('#next-btn').addEventListener('click', () => {
   if (roundComplete) { start(currentMode); return; }
   if (questionIndex === roundQuestions.length - 1) {
@@ -76,7 +78,19 @@ function resetRoundControls() {
   document.querySelector('#answer-form').hidden = false;
   document.querySelector('#hint-btn').hidden = false; document.querySelector('#answer-btn').hidden = false;
 }
-function closeModal() { modal.hidden = true; document.body.style.overflow = ''; }
+function closeModal() {
+  modal.hidden = true; document.body.style.overflow = '';
+  if (returnFocus && typeof returnFocus.focus === 'function') returnFocus.focus();
+}
+modal.addEventListener('keydown', event => {
+  if (event.key !== 'Tab') return;
+  const focusable = [...modal.querySelectorAll('button:not([hidden]), input:not([disabled])')]
+    .filter(element => !element.closest('[hidden]'));
+  if (!focusable.length) return;
+  const first = focusable[0], last = focusable[focusable.length - 1];
+  if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+  else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+});
 document.querySelector('#close-modal').addEventListener('click', closeModal);
 modal.addEventListener('click', event => { if (event.target === modal) closeModal(); });
 document.addEventListener('keydown', event => { if (event.key === 'Escape' && !modal.hidden) closeModal(); });

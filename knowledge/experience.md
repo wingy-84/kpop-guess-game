@@ -24,3 +24,11 @@
 - **適用範圍**：以真實歌曲、藝人和作品畫面作答的音樂問答題庫；年份、團員數、歌名等可由官方發布資訊核對，畫面細節仍需回看官方影片確認。
 - **參考來源**：[BLACKPINK 官方〈DDU-DU DDU-DU〉MV](https://www.youtube.com/watch?v=IHNzOHi8sJs)、[BLACKPINK 官方舞蹈練習](https://www.youtube.com/watch?v=jOJbXvjZ-cQ)、[BTS 官方〈FIRE〉編舞版 MV](https://www.youtube.com/watch?v=2cTZTqBU1Rc)、[JYP 官方〈Feel Special〉MV](https://www.youtube.com/watch?v=3ymwOvzhwHs)、[TIME 對〈Feel Special〉MV 場景的描述](https://time.com/5696384/twice-interview-feel-special/)。
 - **檢查重點**：引用官方影片確認作品與日期；視覺描述須能在 MV 中直接找到，避免把推測寫成線索。
+
+## 2026-11-26：把難度標示放進題目資料並顯示給玩家
+
+- **做法**：每道題各自標記 `easy`、`medium` 或 `hard`，在讀題時映射成繁體中文標籤顯示；新增題目時一併填難度與可接受答案別名。本輪在 Emoji、舞蹈及 MV 模式各加一題：BTS〈Dynamite〉、TWICE〈TT〉、NewJeans〈Ditto〉。
+- **原因**：首頁卡片上的難度只描述模式，不能告訴玩家眼前題目的挑戰程度；題目 metadata 可讓線索和難度維持在同一筆資料中。
+- **適用範圍**：靜態題庫、由前端直接渲染題目的小型遊戲。若之後想按答題正確率自動調整難度，需記錄玩家表現並另訂調整規則。
+- **參考來源**：[HYBE 官方〈Dynamite〉MV](https://www.youtube.com/watch?v=gdZLi9oWNZg)、[JYP 官方 TWICE〈TT〉舞蹈練習](https://www.youtube.com/watch?v=9uypQGzzhns)、[HYBE 官方 NewJeans〈Ditto〉MV Side A](https://www.youtube.com/watch?v=pSUydWEqKwE)。
+- **檢查重點**：每筆題目都有合法難度值；各模式新題可答對；每題顯示正確的中文難度；加題與洗牌後進度總題數會自動更新。

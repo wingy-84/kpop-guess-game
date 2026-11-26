@@ -1,19 +1,22 @@
 const questions = {
   emoji: [
-    { clue: '🌙 🐱 💜', hint: '女團・四人・紫色的夜晚', answers: ['how you like that', 'blackpink'], display: 'BLACKPINK — How You Like That' },
-    { clue: '🧊 👑 🪞', hint: "女團・「I'm on the next level」", answers: ['next level', 'aespa'], display: 'aespa — Next Level' },
-    { clue: '🧛‍♂️ 🌙 🩸', hint: '男團・命運與月亮的故事', answers: ['bite me', 'enhypen'], display: 'ENHYPEN — Bite Me' },
-    { clue: '🍭 🫧 💗', hint: '女團・甜甜的氣泡糖概念', answers: ['bubble gum', 'newjeans'], display: 'NewJeans — Bubble Gum' }
+    { clue: '🌙 🐱 💜', hint: '女團・四人・紫色的夜晚', answers: ['how you like that', 'blackpink'], display: 'BLACKPINK — How You Like That', difficulty: 'medium' },
+    { clue: '🧊 👑 🪞', hint: "女團・「I'm on the next level」", answers: ['next level', 'aespa'], display: 'aespa — Next Level', difficulty: 'easy' },
+    { clue: '🧛‍♂️ 🌙 🩸', hint: '男團・命運與月亮的故事', answers: ['bite me', 'enhypen'], display: 'ENHYPEN — Bite Me', difficulty: 'medium' },
+    { clue: '🍭 🫧 💗', hint: '女團・甜甜的氣泡糖概念', answers: ['bubble gum', 'newjeans'], display: 'NewJeans — Bubble Gum', difficulty: 'easy' },
+    { clue: '🪩 🕺 🎷 ✨', hint: '男團・副歌唱著「light it up like dynamite」', answers: ['dynamite', 'bts'], display: 'BTS — Dynamite', difficulty: 'easy' }
   ],
   dance: [
-    { clue: '招牌動作：食指與拇指比出手槍手勢，隨著副歌節奏指向鏡頭。', hint: '女團・2018 年推出的代表熱門曲', answers: ['ddu-du ddu-du', 'ddu du ddu du', 'blackpink'], display: 'BLACKPINK — 뚜두뚜두 (DDU-DU DDU-DU)' },
-    { clue: '招牌動作：副歌群舞配合「불타오르네」的吶喊，動作俐落有力。', hint: '男團・英文歌名是「火」', answers: ['bts', 'fire'], display: 'BTS — FIRE' },
-    { clue: '招牌動作：手指做出小愛心，再跟著節拍向前推。', hint: '男團・歌名就像一句深情告白', answers: ['love scenario', 'ikon'], display: 'iKON — LOVE SCENARIO' }
+    { clue: '招牌動作：食指與拇指比出手槍手勢，隨著副歌節奏指向鏡頭。', hint: '女團・2018 年推出的代表熱門曲', answers: ['ddu-du ddu-du', 'ddu du ddu du', 'blackpink'], display: 'BLACKPINK — 뚜두뚜두 (DDU-DU DDU-DU)', difficulty: 'medium' },
+    { clue: '招牌動作：副歌群舞配合「불타오르네」的吶喊，動作俐落有力。', hint: '男團・英文歌名是「火」', answers: ['bts', 'fire'], display: 'BTS — FIRE', difficulty: 'easy' },
+    { clue: '招牌動作：手指做出小愛心，再跟著節拍向前推。', hint: '男團・歌名就像一句深情告白', answers: ['love scenario', 'ikon'], display: 'iKON — LOVE SCENARIO', difficulty: 'medium' },
+    { clue: '招牌動作：雙手在臉頰旁比出哭泣符號「TT」，做出委屈表情。', hint: '女團・歌名只有兩個英文字母', answers: ['tt', 'twice'], display: 'TWICE — TT', difficulty: 'easy' }
   ],
   mv: [
-    { clue: 'MV 場景：成員穿梭在各自風格的華麗場景，最後在金色舞台齊舞。', hint: '女團・歌名是在說「感到特別」', answers: ['feel special', 'twice'], display: 'TWICE — Feel Special' },
-    { clue: 'MV 場景：在紅色沙漠與神祕儀式之間穿梭，畫面有強烈的紅黑色調。', hint: '男團・歌名是一種「奇蹟」', answers: ['wonderland', 'ateez'], display: 'ATEEZ — WONDERLAND' },
-    { clue: 'MV 場景：復古校園、Y2K 穿搭，女孩們在走廊和操場自在玩耍。', hint: '女團・歌名是簡單的問候', answers: ['attention', 'newjeans'], display: 'NewJeans — Attention' }
+    { clue: 'MV 場景：成員穿梭在各自風格的華麗場景，最後在金色舞台齊舞。', hint: '女團・歌名是在說「感到特別」', answers: ['feel special', 'twice'], display: 'TWICE — Feel Special', difficulty: 'medium' },
+    { clue: 'MV 場景：在紅色沙漠與神祕儀式之間穿梭，畫面有強烈的紅黑色調。', hint: '男團・歌名是一種「奇蹟」', answers: ['wonderland', 'ateez'], display: 'ATEEZ — WONDERLAND', difficulty: 'hard' },
+    { clue: 'MV 場景：復古校園、Y2K 穿搭，女孩們在走廊和操場自在玩耍。', hint: '女團・歌名是簡單的問候', answers: ['attention', 'newjeans'], display: 'NewJeans — Attention', difficulty: 'easy' },
+    { clue: 'MV 場景：手持攝影機記錄五位女孩的校園日常，MV 分成 Side A 與 Side B。', hint: '女團・歌名描述「我也一樣」', answers: ['ditto', 'newjeans'], display: 'NewJeans — Ditto', difficulty: 'medium' }
   ]
 };
 let currentMode, currentQuestion, questionIndex = 0, hintLevel = 0, solved = false, score = 0, roundQuestions = [], roundComplete = false;
@@ -28,6 +31,8 @@ function start(mode) {
 function showQuestion() {
   currentQuestion = roundQuestions[questionIndex]; hintLevel = 0; solved = false;
   document.querySelector('#round-status').textContent = `第 ${questionIndex + 1} / ${roundQuestions.length} 題 · 得分 ${score}`;
+  const difficultyNames = { easy: '入門', medium: '進階', hard: '挑戰' };
+  document.querySelector('#question-difficulty').textContent = `難度・${difficultyNames[currentQuestion.difficulty]}`;
   document.querySelector('#game-title').textContent = '猜猜這是哪首歌？';
   const names = { emoji: 'EMOJI', dance: 'DANCE MOVE', mv: 'MUSIC VIDEO' };
   document.querySelector('#modal-kicker').textContent = `ROUND ${String(questionIndex + 1).padStart(2, '0')} · ${names[currentMode]}`;

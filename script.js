@@ -44,7 +44,7 @@ document.querySelector('#answer-form').addEventListener('submit', event => {
   event.preventDefault(); if (solved) return;
   const guess = normalize(document.querySelector('#answer-input').value);
   if (!guess) return;
-  const accepted = currentQuestion.answers.some(answer => normalize(answer) === guess || (guess.length > 4 && normalize(answer).includes(guess)));
+  const accepted = currentQuestion.answers.some(answer => normalize(answer) === guess);
   if (accepted) { solved = true; score++; feedback.textContent = `猜對了！答案是 ${currentQuestion.display} 🎉`; feedback.className = 'feedback'; document.querySelector('#answer-input').disabled = true; document.querySelector('#next-btn').hidden = false; document.querySelector('#round-status').textContent = `第 ${questionIndex + 1} / ${roundQuestions.length} 題 · 得分 ${score}`; }
   else { feedback.textContent = '再想一下，或試試提示吧！'; feedback.className = 'feedback wrong'; }
 });

@@ -23,11 +23,19 @@ let currentMode, currentQuestion, questionIndex = 0, hintLevel = 0, solved = fal
 let returnFocus = null;
 const modal = document.querySelector('#game-modal'), clue = document.querySelector('#question-clue'), feedback = document.querySelector('#feedback');
 const normalize = value => value.trim().toLocaleLowerCase().replace(/[\s\-_.!?'’]/g, '');
+function shuffle(items) {
+  const shuffled = [...items];
+  for (let index = shuffled.length - 1; index > 0; index--) {
+    const swapIndex = Math.floor(Math.random() * (index + 1));
+    [shuffled[index], shuffled[swapIndex]] = [shuffled[swapIndex], shuffled[index]];
+  }
+  return shuffled;
+}
 function start(mode) {
   if (modal.hidden) returnFocus = document.activeElement;
   resetRoundControls();
   currentMode = mode; score = 0; questionIndex = 0; roundComplete = false;
-  roundQuestions = [...questions[mode]].sort(() => Math.random() - 0.5);
+  roundQuestions = shuffle(questions[mode]);
   showQuestion(); modal.hidden = false; document.body.style.overflow = 'hidden'; document.querySelector('#answer-input').focus();
 }
 function showQuestion() {

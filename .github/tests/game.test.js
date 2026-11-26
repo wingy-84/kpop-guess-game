@@ -149,6 +149,10 @@ test('rotated decorative artwork cannot add horizontal document overflow', () =>
   assert.match(css, /html\{[^}]*overflow-x:\s*clip/);
 });
 
+test('stylesheet URL has a version to invalidate stale browser caches', () => {
+  assert.match(html, /href="style\.css\?v=\d+"/);
+});
+
 test('small footer text and mode counter separator meet 4.5:1 contrast', () => {
   const luminance = hex => {
     const channels = hex.match(/[0-9a-f]{2}/gi).map(value => parseInt(value, 16) / 255);

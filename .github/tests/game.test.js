@@ -123,6 +123,22 @@ test('every question has valid difficulty and answer aliases', () => {
   }
 });
 
+test('each shuffled round contains every bank question once without mutating the bank', () => {
+  const game = createGame({ random: () => 0.42 });
+  for (const mode of ['emoji', 'dance', 'mv']) {
+    const bankOrder = Array.from(game.inspect().questions[mode], question => question.display);
+    const expected = [...bankOrder].sort();
+    for (let round = 0; round < 100; round++) {
+      game.cards.find(card => card.dataset.mode === mode).onClick();
+      const roundOrder = Array.from(game.inspect().roundQuestions, question => question.display);
+      assert.equal(roundOrder.length, bankOrder.length);
+      assert.equal(new Set(roundOrder).size, bankOrder.length);
+      assert.deepEqual([...roundOrder].sort(), expected);
+    }
+    assert.deepEqual(Array.from(game.inspect().questions[mode], question => question.display), bankOrder);
+  }
+});
+
 test('dialog traps keyboard focus and returns focus to its opener on Escape', () => {
   const game = createGame();
   const opener = game.cards[0];

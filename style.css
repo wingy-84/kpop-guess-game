@@ -5,3 +5,4 @@
 .game-modal form[hidden]{display:none}
 .question-difficulty{display:inline-block;margin:-5px 0 11px;padding:5px 9px;border-radius:99px;background:#a78bfa1c;color:#c7b5ff;font-size:10px;letter-spacing:.04em}.round-status{margin-bottom:9px}
 button:focus-visible,a:focus-visible,input:focus-visible{outline:2px solid #d0b5ff;outline-offset:3px}
+.game-modal{max-height:calc(100vh - 40px);overflow-y:auto}@media(max-width:480px){.game-modal{padding:28px 20px 22px;border-radius:18px}.game-modal h2{font-size:20px}.game-modal form{flex-direction:column}.game-modal input{min-height:44px;font-size:16px}.game-modal form .primary-btn{justify-content:center;min-height:44px}.modal-controls{flex-wrap:wrap}.modal-controls button{min-height:44px;font-size:11px}}

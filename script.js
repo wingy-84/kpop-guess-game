@@ -15,8 +15,8 @@ const questions = {
   mv: [
     { clue: 'MV 場景：成員穿梭在各自風格的華麗場景，最後在金色舞台齊舞。', hint: '女團・歌名是在說「感到特別」', answers: ['feel special', 'twice'], display: 'TWICE — Feel Special', difficulty: 'medium' },
     { clue: 'MV 場景：成員穿著紅黑制服，在行進樂隊與烈焰場景前列隊前進。', hint: '男團・歌名是一種「奇蹟」', answers: ['wonderland', 'ateez'], display: 'ATEEZ — WONDERLAND', difficulty: 'hard' },
-    { clue: 'MV 場景：五位女孩在大片綠草與藍天前自在起舞，畫面明亮清爽。', hint: '女團・歌名是簡單的問候', answers: ['attention', 'newjeans'], display: 'NewJeans — Attention', difficulty: 'easy' },
-    { clue: 'MV 場景：手持攝影機記錄五位女孩的校園日常，MV 分成 Side A 與 Side B。', hint: '女團・歌名描述「我也一樣」', answers: ['ditto', 'newjeans'], display: 'NewJeans — Ditto', difficulty: 'medium' }
+    { clue: 'MV 場景：五位女孩在大片綠草與藍天前自在起舞，畫面明亮清爽。', hint: '女團・歌名是簡單的問候', answers: ['attention'], display: 'NewJeans — Attention', difficulty: 'easy' },
+    { clue: 'MV 場景：手持攝影機記錄五位女孩的校園日常，MV 分成 Side A 與 Side B。', hint: '女團・歌名描述「我也一樣」', answers: ['ditto'], display: 'NewJeans — Ditto', difficulty: 'medium' }
   ]
 };
 let currentMode, currentQuestion, questionIndex = 0, hintLevel = 0, solved = false, score = 0, roundQuestions = [], roundComplete = false;

@@ -115,10 +115,17 @@ test('answer matching accepts normalized full aliases and rejects partial matche
 test('every question has valid difficulty and answer aliases', () => {
   const game = createGame();
   for (const questions of Object.values(game.inspect().questions)) {
+    const aliasOwners = new Map();
     for (const question of questions) {
       assert.ok(['easy', 'medium', 'hard'].includes(question.difficulty));
       assert.ok(question.answers.length > 0);
       assert.ok(question.answers.every(answer => typeof answer === 'string' && answer.trim()));
+      for (const answer of question.answers) {
+        const alias = answer.trim().toLocaleLowerCase().replace(/[\s\-_.!?'’]/g, '');
+        const owner = aliasOwners.get(alias);
+        assert.ok(!owner || owner === question.display, `Ambiguous alias "${answer}" matches ${owner} and ${question.display}`);
+        aliasOwners.set(alias, question.display);
+      }
     }
   }
 });

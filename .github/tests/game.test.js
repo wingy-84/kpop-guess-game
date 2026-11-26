@@ -127,6 +127,10 @@ test('answer field asks for the song title accepted by every question', () => {
   assert.doesNotMatch(html, /輸入歌名或歌手/);
 });
 
+test('hint updates are announced to screen readers', () => {
+  assert.match(html, /id="artist-hint" aria-live="polite"/);
+});
+
 test('every question has valid difficulty and answer aliases', () => {
   const game = createGame();
   for (const questions of Object.values(game.inspect().questions)) {

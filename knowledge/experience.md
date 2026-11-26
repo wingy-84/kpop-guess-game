@@ -78,3 +78,5 @@
 ### Pages artifact job 邊界
 
 本次回歸檢查成功，但 Pages 部署 action 在同一 deploy job 找不到上一步才上傳的 artifact。將 Pages 設定與 artifact 上傳移到已完成檢查的 `verify` job，再由 `needs: verify` 的 `deploy` job 取用；部署 job 明列 `actions: read`、`pages: write`、`id-token: write` 所需權限。之後修改 artifact 產生與部署工作流程時，應依賴 job 間明確的 `needs`，並檢查 artifact 對部署 action 可見。
+
+- **正式發布驗證**：修正 artifact job 邊界後，GitHub Actions 的 `verify` 與 `deploy` 皆成功；正式頁面 HTTP 200，遠端 JavaScript 已含新增題目。純前端專案可用 workflow 狀態與站點回應做最小端到端驗證。

@@ -67,3 +67,10 @@
 - **適用範圍**：以第三方音樂影片補充靜態網站線索的情境。自製或採授權素材仍需保存授權來源、作者與適用條款。
 - **參考來源**：[YouTube 官方嵌入說明與播放器政策](https://support.google.com/youtube/answer/171780?hl=en)、[YouTube 使用條款](https://www.youtube.com/t/terms)、[Creative Commons CC BY 4.0 授權要求](https://creativecommons.org/licenses/by/4.0/deed.en)。
 - **檢查重點**：確認素材來源、明確授權、平台嵌入設定、必要的署名，以及第三方載入對隱私與載入速度的影響。YouTube 說明也指出，兒童導向網站需遵守相應的自我標示要求；在確定網站受眾前不新增嵌入播放器。
+
+## 2026-11-26：讓回歸檢查先於靜態網站部署
+
+- **做法**：把無相依套件的核心互動檢查放在 `.github/tests/`，以 Node.js 內建 `node:test` 驅動模擬 DOM；Pages 部署 job 必須等語法檢查與回歸檢查通過才執行。
+- **覆蓋範圍**：三種模式回合、正確作答得分、揭曉答案不計分、結算與重玩、答案正規化及片段拒絕、題目難度／別名資料、鍵盤焦點循環與關閉後還原。
+- **適用範圍**：純前端、無套件建置流程的靜態網站，可用 Node.js 內建測試工具維持輕量 CI。模擬 DOM 不能取代真實瀏覽器的跨裝置視覺檢查。
+- **檢查結果**：`node --check script.js` 通過；`node --test .github/tests/game.test.js` 4 項通過。

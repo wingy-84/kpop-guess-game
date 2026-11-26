@@ -5,6 +5,7 @@ const test = require('node:test');
 const vm = require('node:vm');
 
 const source = fs.readFileSync(path.join(__dirname, '..', '..', 'script.js'), 'utf8');
+const html = fs.readFileSync(path.join(__dirname, '..', '..', 'index.html'), 'utf8');
 
 function createGame({ random = Math.random } = {}) {
   let document;
@@ -118,6 +119,12 @@ test('second hint shows the first letter of the song title', () => {
   game.elements['hint-btn'].click();
   game.elements['hint-btn'].click();
   assert.equal(game.elements['artist-hint'].textContent, '歌名第一個字母：N');
+});
+
+test('answer field asks for the song title accepted by every question', () => {
+  assert.match(html, /<label class="sr-only" for="answer-input">輸入歌名<\/label>/);
+  assert.match(html, /id="answer-input" autocomplete="off" placeholder="輸入歌名…"/);
+  assert.doesNotMatch(html, /輸入歌名或歌手/);
 });
 
 test('every question has valid difficulty and answer aliases', () => {

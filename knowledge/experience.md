@@ -53,3 +53,9 @@
 - **原因**：`sort(() => Math.random() - 0.5)` 不符合排序器一致性要求，會導致偏斜且不可靠的排序結果；逐步隨機交換更清楚地表達洗牌目的，也保留原題庫。
 - **適用範圍**：需將有限清單打亂順序的前端遊戲。若要求可重現結果或可稽核的抽獎，另需可注入的種子亂數或合適的隨機來源。
 - **檢查重點**：每輪題目數量與題庫一致、每題恰好出現一次，且洗牌前後的原題庫順序不變。
+
+### 題目校對補充
+
+後續核對發現，iKON〈LOVE SCENARIO〉的「小愛心」動作缺乏可靠來源支持，改為較概括且符合官方資料的隊形流動線索；ATEEZ〈WONDERLAND〉改為紅黑制服、行進樂隊與烈焰場景；NewJeans〈Attention〉改為藍天綠草前的舞蹈場景。此類視覺細節應回看 MV 並以官方或可靠拍攝地資料交叉確認，無法確認時採用更概括的線索。
+
+參考：[YG LIFE 對〈LOVE SCENARIO〉編舞的說明](https://yg-life.com/archives/96823?lang=en)、[仁川觀光官方網站對〈Attention〉拍攝場景的記錄](https://eng-itour.incheon.go.kr/cmn/board/BBSMSTR_000000000080/4934bbsDetail.do)、[KpopStarz 對〈WONDERLAND〉MV 場景的報導](https://www.kpopstarz.com/articles/303927/20220113/ateez-gets-first-100-million-views-youtube-wonderland-mv.htm)。

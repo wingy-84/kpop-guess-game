@@ -113,3 +113,7 @@ Emoji 模式新增 BLACKPINK〈Pink Venom〉，使用歌名意象與官方音源
 
 - **適用範圍**：向靜態猜歌遊戲新增不同類型線索時；每題依線索類型查核官方歌曲／編舞素材或可信的 MV 場景報導，並維持每種模式內答案唯一。
 - **參考來源**：[BLACKPINK 官方〈Pink Venom〉音源](https://www.youtube.com/watch?v=3or3dp3qNQU)、[SOURCE MUSIC〈ANTIFRAGILE〉作品頁](https://www.sourcemusic.com/artist/discography/LE%20SSERAFIM/9?lang=en)、[Weverse Magazine 編舞描述](https://magazine.weverse.io/article/view/548?lang=en)、[NME 對 TWICE〈The Feels〉MV 的描述](https://www.nme.com/news/music/twice-the-feels-music-video-release-watch-3059796)。
+
+### 路線圖校對範圍
+
+三題新增後，題庫總數由 13 增至 16（Emoji 6、舞蹈 5、MV 5）。路線圖項目改用「目前題庫」描述持續有效的校對範圍，不在長期待辦文字中寫死題數；新增內容仍逐題沿用來源查核。適用於會持續增長的資料集、題庫或清單型專案，避免文件中的數字隨內容變動而失真。

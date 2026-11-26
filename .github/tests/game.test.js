@@ -7,6 +7,7 @@ const vm = require('node:vm');
 const source = fs.readFileSync(path.join(__dirname, '..', '..', 'script.js'), 'utf8');
 const html = fs.readFileSync(path.join(__dirname, '..', '..', 'index.html'), 'utf8');
 const css = fs.readFileSync(path.join(__dirname, '..', '..', 'style.css'), 'utf8');
+const plan = fs.readFileSync(path.join(__dirname, '..', '..', 'knowledge', 'plan.md'), 'utf8');
 
 function createGame({ random = Math.random } = {}) {
   let document;
@@ -153,6 +154,12 @@ test('small footer text and mode counter separator meet 4.5:1 contrast', () => {
   const separator = css.match(/\.mode-count i\{[^}]*color:(#[0-9a-f]{6})/i)?.[1];
   assert.ok(footer && contrast(footer, '#10101a') >= 4.5);
   assert.ok(separator && contrast(separator, '#10101a') >= 4.5);
+});
+
+test('roadmap review item stays scoped to the current question bank', () => {
+  assert.match(plan, /審閱目前題庫的線索與答案配對/);
+  assert.match(plan, /後續新增題目沿用來源查核流程/);
+  assert.doesNotMatch(plan, /審閱目前\s+\d+\s*道題目/);
 });
 
 test('every question has valid difficulty and answer aliases', () => {

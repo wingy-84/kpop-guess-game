@@ -88,3 +88,9 @@
 - **做法**：當同一模式含有同藝人的多首歌時，這些題目只保留各自歌曲名稱／明確別名；CI 將每個模式的正規化答案設為唯一。
 - **適用範圍**：提供多答案別名的單題測驗，尤其是同一位藝人或系列名稱可對應多題時。跨模式可以重複答案，因為每輪只從一種模式出題。
 - **檢查重點**：對每個模式建立正規化答案索引，確認沒有別名同時指向兩道題；完整歌名仍能答對。
+
+### Emoji 線索校正
+
+已把 BLACKPINK〈How You Like That〉和 aespa〈Next Level〉的 Emoji 線索，從較主觀的月亮／貓／鏡子意象改為對應副歌文字的眼睛／樓梯符號，保留現有難度標示與答案別名。線索的圖像轉譯仍可有創意，但優先確保玩家能從歌曲本身找到對應點。
+
+參考：[BLACKPINK 官方〈How You Like That〉MV](https://www.youtube.com/watch?v=ioNng23DkIM)、[SMTOWN 官方 aespa〈Next Level〉MV](https://www.youtube.com/watch?v=4TWR90KJl84)。

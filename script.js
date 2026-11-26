@@ -1,7 +1,7 @@
 const questions = {
   emoji: [
-    { clue: '🌙 🐱 💜', hint: '女團・四人・紫色的夜晚', answers: ['how you like that', 'blackpink'], display: 'BLACKPINK — How You Like That', difficulty: 'medium' },
-    { clue: '🧊 👑 🪞', hint: "女團・「I'm on the next level」", answers: ['next level', 'aespa'], display: 'aespa — Next Level', difficulty: 'easy' },
+    { clue: '👀 🫵 ↔️ 👀 🙋‍♀️', hint: '女團・歌詞反覆唱「look at you, now look at me」', answers: ['how you like that', 'blackpink'], display: 'BLACKPINK — How You Like That', difficulty: 'medium' },
+    { clue: '🪜 🚪 🔝', hint: "女團・副歌唱著「I'm on the next level」", answers: ['next level', 'aespa'], display: 'aespa — Next Level', difficulty: 'easy' },
     { clue: '🧛‍♂️ 🌙 🩸', hint: '男團・命運與月亮的故事', answers: ['bite me', 'enhypen'], display: 'ENHYPEN — Bite Me', difficulty: 'medium' },
     { clue: '🍭 🫧 💗', hint: '女團・甜甜的氣泡糖概念', answers: ['bubble gum', 'newjeans'], display: 'NewJeans — Bubble Gum', difficulty: 'easy' },
     { clue: '🪩 🕺 🎷 ✨', hint: '男團・副歌唱著「light it up like dynamite」', answers: ['dynamite', 'bts'], display: 'BTS — Dynamite', difficulty: 'easy' }
